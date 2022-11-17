@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 15px;
+    font-family: 'Inter';
+    font-weight: 400;
+    color:  hsl(236, 13%, 42%);
+}
+
+.container {
+    margin: 50px;
+    display: grid;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+ 
+ .header nav {
+     opacity: 1;
+     z-index: auto;
+     width: 100%;
+ }
+
+ nav.open {
+    position: relative;
+    width: auto;
+    background-color: transparent;
+    padding: 0;
+    z-index: auto;
+ }
+
+ .header nav #menu-close {
+    display: none;
+ }
+
+ #menu {
+    border: none;
+    outline: none;
+    background: transparent;
+    display: none;
+ }
+
+.header nav ul {
+    position: relative;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 3rem;
+    transform: translateY(0%);
+    list-style: none;
+    padding-right: 5rem;
+}
+
+
+li:hover {
+    cursor: pointer;
+    color: hsl(5, 85%, 63%);
+} 
+
+ main { 
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr ;
+    grid-template-rows: 1fr;
+    gap: 2rem;
+    margin: 2rem auto;
+    
+} 
+.image {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1 /span 2;
+} 
+
+.image img {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 15px;
+}
+
+.description {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+ 
+}
+.heading {
+    font-size: 40px;
+    color: hsl(240, 100%, 5%);
+    font-weight: 900;
+}
+
+.paragraph {
+    color: hsl(236, 13%, 42%);
+    line-height: 1.8;
+    padding-right: 4rem;
+    padding-bottom: 18px;
+}
+
+.btn {
+   padding: 12px;
+   background-color: hsl(5, 85%, 63%);
+   color: hsl(36, 100%, 99%);
+   width: 50%;
+   border: none;
+   outline: none;  
+   grid-column: 2 / -1;
+}
+
+.btn:hover {
+    cursor: pointer;
+    color: hsl(35, 77%, 62%);
+    background-color: hsl(240, 100%, 5%);
+}
+
+.emerging_issues {
+    width: 365px;
+    background-color: hsl(240, 100%, 5%);
+    color: hsl(236, 13%, 42%);
+    padding: 15px;
+}
+
+.heading_2 {
+    color: hsl(35, 77%, 62%);
+    font-size: 34px;
+    margin: 20px 0;
+}
+
+h3 {
+    color:hsl(36, 100%, 99%);
+    font-size: 25px;
+    padding: 15px 0;
+}
+h3:hover {
+    cursor: pointer;
+    color: hsl(35, 77%, 62%);
+}
+
+.about_cars {
+    padding: 15px 0;
+    border-bottom: 1px solid hsl(236, 13%, 42%);
+    color:hsla(36, 100%, 99% , 0.6);
+}
+.about_artistry {
+    border-bottom: 1px solid hsl(236, 13%, 42%);
+    color:hsla(36, 100%, 99%, 0.6);
+    padding: 15px 0;
+}
+.about_funding {
+    color:hsla(36, 100%, 99%, 0.6);
+    padding: 15px 0;
+}
+
+.more_info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.more_info img {
+    width: 100px;
+    height: 125px;
+}
+.retro_pc, .laptops, .gaming {
+    display: flex;
+    gap: 1rem;
+}
+.rank {
+    font-size: 36px;
+    color: hsl(233, 8%, 79%);
+    padding-bottom: 12px;
+}
+.about_retro ,.about_laptops,.about_gaming {
+    color: hsl(240, 100%, 5%);
+    padding-bottom: 12px;
+}
+.about_retro:hover ,.about_laptops:hover,.about_gaming:hover {
+    cursor: pointer;
+    color: hsl(5, 85%, 63%);
+}
+.retro_topic_sentence, .laptops_details, .gaming_details {
+    font-size: 12px;
+    width: 60%;
+    line-height: 1.4;
+}
+
+
+@media (max-width:767px) {
+    .container {
+        max-width: 380px;
+        margin: 20px auto;
+        display: block;
+    }
+
+    #menu {
+        display: inline-flex;
+        border: none;
+        outline: none;
+        background:transparent;
+    }
+    
+    #menu-close {
+        background: transparent;
+        border: none;
+        outline: none;
+        position: absolute;
+        right: 2.85rem;
+        top: 1.75rem;
+        z-index: 99999;
+        cursor: pointer;
+    }
+
+    .header nav {
+        opacity: 0;
+        z-index: -999;
+        transition: all 0.3s ease-in-out;
+    }
+    nav.open {
+        position: fixed;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 75vw;
+        background-color: white;
+        padding: 1.25rem;
+        opacity: 1;
+        z-index: 99999999999;
+    }
+    
+
+    header nav ul {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    header nav ul li {
+        margin: 1.5rem 0;
+        line-height: 1.5rem;
+        font-size: 18px;
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 4rem;
+        margin: auto;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        margin: 1rem auto;
+    }
+
+    .image img {
+        max-width: 100%;
+    }
+    .description {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .more_info {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .retro_topic_sentence, .laptops_details, .gaming_details {       
+        width: 80%;
+    }
+    
+}
+.attribution { 
+    font-size: 11px;
+    text-align: center; 
+    padding-bottom: 15px;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+ }
